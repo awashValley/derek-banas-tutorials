@@ -14,7 +14,7 @@
     <script>
      /*------------------------------------------------------------------------------;
      * 1. Introduction                                                               ;
-     *-------------------------------------------------------------------------------;
+     *-------------------------------------------------------------------------------*/
       // var yourName = prompt("What is your name?");
       //
       // if (yourName != null) {
@@ -24,8 +24,8 @@
       // }
 
       /*------------------------------------------------------------------------------;
-      * 2. Mathematical stuff                                                        ;
-      *-------------------------------------------------------------------------------;
+      * 2. Mathematical stuff                                                         ;
+      *-------------------------------------------------------------------------------*/
       // document.write("5 + 4 = ", 5 + 4, "<br />");
       // document.write("5 - 4 = ", 5 - 4, "<br />");
       // document.write("5 * 4 = ", 5 * 4, "<br />");
@@ -81,9 +81,56 @@
 
 
       /*------------------------------------------------------------------------------;
-      * 3. Working with STRINGS                                                       ;
-      *-------------------------------------------------------------------------------;
-      
+      * 3. Working with STRINGS: part 1                                               ;
+      *-------------------------------------------------------------------------------*/
+      // var randStr = "A long " + "string that " + "goes on and on";
+
+      // document.write("String length : ", randStr.length + "<br />");
+      // document.write("Index of \"that\" : ", randStr.indexOf("that"), "<br />");
+      // document.write("Index of \"at\" : ", randStr.indexOf("at"), "<br />");
+
+      // 3.1. slice
+      // document.write("randStr.slice(19, 23): " + randStr.slice(19, 23), "<br />");
+      // document.write("randStr.slice(19): " + randStr.slice(19), "<br />");
+      // document.write("randStr.substr(19, 23): " + randStr.substr(19, 4), "<br />");
+
+      // 3.2. replace and index
+      // document.write(randStr.replace("and on", "forever") , "<br />");
+      // document.write("At Index 3 : ", randStr.charAt(3), "<br />")
+
+      // 3.3. get an array
+      // var randStrArray = randStr.split(" ");
+
+      // 3.4. Trim
+      // randStr = randStr.trim();
+
+      // 3.5. lower/upper case
+      // document.write(randStr.toUpperCase(), "<br />");
+      // document.write(randStr.toLowerCase(), "<br />");
+
+      /*------------------------------------------------------------------------------;
+      * 4. Working with STRINGS: part 2 (styling)                                     ;
+      *-------------------------------------------------------------------------------*/
+      var strToStyle = "Random String";
+
+      document.write("Big : ", strToStyle.big(), "<br />");
+      document.write("Small : ", strToStyle.small(), "<br />");
+
+      document.write("Bold : ", strToStyle.bold(), "<br />");
+      document.write("Italics : ", strToStyle.italics(), "<br />");
+      document.write("Strike : ", strToStyle.strike(), "<br />");
+      document.write("Sub : ", strToStyle.sub(), "<br />");
+      document.write("Sup : ", strToStyle.sup(), "<br />");
+
+      document.write("Font color : ", strToStyle.fontcolor("blue"), "<br />");
+      document.write("Font size : ", strToStyle.fontsize("8em"), "<br />");
+
+      document.write("Google : ", strToStyle.link("http://google.com"), "<br />");
+
+
+      /*------------------------------------------------------------------------------;
+      * 5. Conditionals                                                               ;
+      *-------------------------------------------------------------------------------*/
     </script>
   </body>
 </html>
