@@ -111,26 +111,233 @@
       /*------------------------------------------------------------------------------;
       * 4. Working with STRINGS: part 2 (styling)                                     ;
       *-------------------------------------------------------------------------------*/
-      var strToStyle = "Random String";
-
-      document.write("Big : ", strToStyle.big(), "<br />");
-      document.write("Small : ", strToStyle.small(), "<br />");
-
-      document.write("Bold : ", strToStyle.bold(), "<br />");
-      document.write("Italics : ", strToStyle.italics(), "<br />");
-      document.write("Strike : ", strToStyle.strike(), "<br />");
-      document.write("Sub : ", strToStyle.sub(), "<br />");
-      document.write("Sup : ", strToStyle.sup(), "<br />");
-
-      document.write("Font color : ", strToStyle.fontcolor("blue"), "<br />");
-      document.write("Font size : ", strToStyle.fontsize("8em"), "<br />");
-
-      document.write("Google : ", strToStyle.link("http://google.com"), "<br />");
+      // var strToStyle = "Random String";
+      //
+      // document.write("Big : ", strToStyle.big(), "<br />");
+      // document.write("Small : ", strToStyle.small(), "<br />");
+      //
+      // document.write("Bold : ", strToStyle.bold(), "<br />");
+      // document.write("Italics : ", strToStyle.italics(), "<br />");
+      // document.write("Strike : ", strToStyle.strike(), "<br />");
+      // document.write("Sub : ", strToStyle.sub(), "<br />");
+      // document.write("Sup : ", strToStyle.sup(), "<br />");
+      //
+      // document.write("Font color : ", strToStyle.fontcolor("blue"), "<br />");
+      // document.write("Font size : ", strToStyle.fontsize("8em"), "<br />");
+      //
+      // document.write("Google : ", strToStyle.link("http://google.com"), "<br />");
 
 
       /*------------------------------------------------------------------------------;
       * 5. Conditionals                                                               ;
       *-------------------------------------------------------------------------------*/
+      // var age = 5;
+      // if ((age >= 5) && (age <= 6)) {
+      //   document.write("Go to Kindergarten" + "<br />");
+      // } else if (age > 18) {
+      //   document.write("Go to College" + "<br />");
+      // } else {
+      //   document.write("Go to ", age - 5, "<br />");
+      // }
+
+      // document.write("true || false: ", true || false, "<br />");
+      // document.write("!true: ", !true, "<br />");
+      // document.write("\"5\" == 5: ", ("5" == 5), "<br />");
+      // document.write("\"5\" === 5: ", ("5" === 5), "<br />");   // evaluates both value and type of the variables
+
+      // 5.2. Switch.
+      // var age = 20;
+      // switch (age) {
+      //   case 5:
+      //   case 6:
+      //     document.write("Go to Kindergarten" + "<br />");
+      //     break;
+      //   case 7:
+      //     document.write("Go to 1st grade" + "<br />");
+      //     break;
+      //   default:
+      //     document.write("Subtract 5 from your age" + "<br />");
+      // }
+
+      // 5.3. Ternary operator
+      // var canIVote = (age >= 18) ? true : false;
+      // document.write("Can I vote? ", canIVote + "<br />");
+
+
+      /*------------------------------------------------------------------------------;
+      * 5. Looping                                                                    ;
+      *-------------------------------------------------------------------------------*/
+      // 5.1. WHILE / DO WHILE
+      // var i = 1;
+
+      // while(i <= 10){
+      //   document.write(i + "<br />");
+      //   i++;
+      // }
+
+      // do{
+      //   var guess = prompt("Guess a number between 1 and 20");
+      // } while (guess != 15);
+      //
+      // alert("You guessed 15!");
+
+      // 5.2. FOR Loop
+      // for (var j = 0; j <= 20; j++) {
+      //   if ((j % 2) == 0) {
+      //     continue;
+      //   }
+      //
+      //   if (j == 15) {
+      //     break;
+      //   }
+      // }
+
+      // var customer = {name : "Bob Thomas", address : "123 Main",
+      //                 balance : 50.50};
+      //
+      // for (k in customer) {
+      //   document.write(customer[k] + "<br />");
+      // }
+
+
+      /*------------------------------------------------------------------------------;
+      * 6. Array                                                                      ;
+      *-------------------------------------------------------------------------------*/
+      // var tomSmith = ["Tom Smith", "123 Main", 120.54];
+
+      // document.write("1st Index ", tomSmith[0] + "<br />");
+
+      // add values into an Array
+      // tomSmith[3] = "tSmith@aol.om";
+
+      // overwrite
+      // tomSmith.splice(2, 1, "Pittsburgh", "PA");
+
+      // delete
+      // tomSmith.splice(4, 1); // the "4" indicates the index, and the "1" about only one thing to delete.
+      // delete tomSmith[4];
+
+      // convert an array to string
+      // document.write("Array : ", tomSmith.valueOf(), "<br />");   // 1st method
+      // document.write("Array : ", tomSmith.join(", "), "<br />");  // 2nd method
+
+      // Sorting
+      // tomSmith.sort();    // reverse sorting, i.e., numbers and then letters
+
+      // Sorting numbers
+      // var numbers = [4, 3, 9, 1, 20, 43];
+
+      // numbers.sort(function(x, y){ return x - y});    // ascending
+      // numbers.sort(function(x, y){ return y - x});    // descending
+
+      // convert array numbers to string
+      // document.write("Num Array : ", numbers.toString(), "<br />");
+
+      // concatenate arrays
+      // var combinedArray = numbers.concat(tomSmith);
+
+      // remove last item
+      // tomSmith.pop();
+
+      // add item at the last position
+      // tomSmith.push("555-1212","USA");
+
+      // remove the first item
+      // tomSmith.shift();
+
+      // add item at the start position
+      // tomSmith.unshift("Mr.");
+
+      // for(k in tomSmith){
+      //   document.write(tomSmith[k] + " ");
+      // }
+
+
+      /*------------------------------------------------------------------------------;
+      * 7. Functions                                                                  ;
+      *-------------------------------------------------------------------------------*/
+      // 7.1. Intro
+      // function inArray(arrayToCheck, value) {
+      //   for(i = 0; i < arrayToCheck.length; i++) {
+      //     if(arrayToCheck[i] === value) {
+      //       return true;
+      //     }
+      //   }
+      //
+      //   return false;
+      // }
+      //
+      // var randArray = [1,2,3,4,5];
+      //
+      // document.write("In Array : ", inArray(randArray, 100), "<br />");
+
+      // 7.2. Local variables
+      // function times2(num) {
+      //   var var2 = 2;
+      //
+      //   return num * var2;
+      // }
+      // document.write("var2 ", var2, "<br />");    // var2 is not known since it is a local variable.
+
+      // function times3(num) {
+      //   return num * 3;
+      // }
+      //
+      // function multiply(func, num) {
+      //   return func(num);
+      // }
+
+      // document.write("2 * 15 = ", multiply(times2, 15), "<br />");
+      // document.write("3 * 15 = ", multiply(times3, 15), "<br />");
+
+      // 7.3. Function expressions. Its application is for storing arrays of functions.
+      // var triple = function(num) {
+      //   return num * 3;
+      // }
+      //
+      // document.write("3 * 45 = ", multiply(triple, 45), "<br />");
+
+      // 7.4. Function without an argument since we don't know the number of arguments per se.
+      // function getSum(){
+      //
+      //   var sum = 0;
+      //   for(i = 0; i < arguments.length; i++) {
+      //     sum += arguments[i];
+      //   }
+      //
+      //   return sum;
+      // }
+      //
+      // document.write("Sum = ", getSum(1,2,3,4,5), "<br />");
+
+      // 7.5. Array as an argument
+      // function times2(theArray) {
+      //
+      //   var newArray = [];
+      //   for(i = 0; i < theArray.length; i++) {
+      //     newArray.push(theArray[i] * 2);
+      //   }
+      //
+      //   return newArray;
+      // }
+      //
+      // document.write("Array Double = ", times2([1,2,3,4,5]).toString(), "<br />");
+
+      // 7.6. Recursive functions
+      // function factorial(num) {
+      //   if(num <= 1) {
+      //     return 1;
+      //   } else {
+      //     return num * factorial(num - 1);
+      //   }
+      // }
+      //
+      // document.write("Factorial of 4 = ", factorial(4), "<br />");
+      // STEPS
+      // 1st: num = 4 * factorial(3) = 4 * 6 = 24
+      // 2nd: num = 3 * factorial(2) = 3 * 2 = 6
+      // 3rd: num = 2 * factorial(1) = 2 * 1 = 2
+      
     </script>
   </body>
 </html>
