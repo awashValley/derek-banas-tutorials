@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object Oriented Javascript</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // basic object
+      var customer = {
+        name: "Tom Smith",
+        speak: function() {
+          return "My name is " + this.name;
+        },
+
+        address: {
+          street: '123 Main St',
+          city:   "Pittsburgh",
+          state:  "PA"
+        }
+      };
+
+      document.write(customer.speak() + "<br />");
+
+      document.write(customer.name + " lives at " + customer.address.street + "<br />");
+
+      // add property to a class
+      customer.address.country = "USA";
+      document.write(customer.address.country + "<br />");
+
+
+      // Constructor
+      function Person(name, street) {
+        this.name = name;
+        this.street = street;
+
+        this.info = function(){
+          return "My name is " + this.name + " and I live on " + this.street;
+        }
+      }
+
+      var bobSmith = new Person("Bob Smith", "234 Main st");
+      document.write(bobSmith.info() + "<br />");
+
+      // check instance of an object
+      document.write("Bob is a Person " + (bobSmith instanceof Person) + "<br />");
+
+      // change values
+      function changeName(person) {
+        person.name = "Sue Smith";
+      }
+
+      changeName(bobSmith);
+      document.write("Bob became " + bobSmith.name + "<br />");
+
+
+    </script>
+  </body>
+</html>
