@@ -1,0 +1,39 @@
+
+## Regular expression is not confusing. For example,
+123 Main St.
+   \d{1,5}\s\w+\s\w+\.
+
+## terminology (part 1)
+\d - represents any number
+\D - anything but a number
+\s - any space
+\S - anything but a space
+\w - any character, i.e., a letter
+\W - anything but a character
+\b - matches a word, then a space, and then a word. For example, "My dog..."
+
+## example: suppose you would like to search for Jennifer
+'Jennifer\s\w+\s'		# this grabs not only Jennifer, but also her last name (becuase of w+)
+
+
+## terminology (part 2)
+?   - represents 0 or 1 repetitions
+*   - 0 or more repetitions
+{n} - n repetitions/ digits of what proceeds. For example,
+    - \d{5} implies there are exactly 5 digits;
+    - \d{1,5} implies there are at least one and at most five digits
+
+## search for an amount in dollars, e.g., $28.98
+\$\d*\.\d{2}
+
+## escaping
+\e - escape white spaces
+\f - form feed
+\n - newline
+\r - carriage return
+\t - tab
+
+## searching misspelled word, i.e., CALENDAR spelled wrongly as CALENDER
+calend[ae]r   # In the case where any possible characters could be misspelled: [a-z]
+              # In the case where any possible number could be misspelled: [0-9]
+              # In the case of mixtures: [A-Fa-t0-4]
