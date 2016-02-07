@@ -22,3 +22,25 @@ for line in fl:
     strToSearch += line
 
 print(strToSearch)
+
+## define patter finder function
+pattFinder1 = re.compile('Aa1B')
+# pattFinder1 = re.compile('2c#')
+findPatt1   = re.search(pattFinder1, strToSearch)
+print(findPatt1.group())
+print(findPatt1.start())        ## index position where the first pattern was found
+print(findPatt1.end())          ## index position where the last patterb was found
+print(findPatt1.span())
+
+## to find all the same patterns
+findPatt1 = re.findall(pattFinder1, strToSearch)
+for i in findPatt1:
+    print(i)
+
+## split by the pattern
+splitFound = pattFinder1.split(strToSearch)
+print(splitFound)
+
+## replacing a pattern by another text
+subFound = pattFinder1.sub('Real Text', strToSearch)
+print(subFound)
