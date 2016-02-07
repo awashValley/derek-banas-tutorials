@@ -10,7 +10,8 @@ for line in fl:
 print(strToSearch)
 
 ## search for Jennifer
-pattFinder = re.compile('Je[nnifer|nny|n]{1,6}\s\w+\s')
+# pattFinder = re.compile('Je[nnifer|nny|n]{1,6}\s\w+\s')
+pattFinder = re.compile('Je[nifery]{1,6}\s\w+\s')       ## works fine too
 findPatt  = re.findall(pattFinder, strToSearch)
 
 if(findPatt):
