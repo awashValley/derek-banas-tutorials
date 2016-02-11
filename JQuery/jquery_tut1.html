@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery Ex 1</title>
+    <style>
+
+    </style>
+
+    <!-- include JQuery library -->
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
+    </script>
+
+    <script type="text/javascript">
+      /* select an element from a page:
+           - using js     -> document.getElementByTagName("td");
+           - using jquery -> $("td"); */
+
+      // anonymous function (or namespace)
+      //  - a function that is called when the document is loaded.
+      $("document").ready(function() {
+        // select all the td tags
+        $("td").css("padding", "60px", "10px");
+        $(".hero").css("color", "red");
+
+        $("ul li.villion").css("background-color", "green");
+
+        $("#numbers").css("background-color", "red");   // NOT WORKING
+      });
+
+    </script>
+
+  </head>
+  <body>
+
+    <dv id="numbers">
+      <p>
+        <h3>The Most Important Numbers</h3>
+        <table>
+          <tr>
+            <th>Number</th>
+            <th>Why I care</th>
+          </tr>
+          <tr>
+            <th>2012</th>
+            <th>Year We All Die</th>
+          </tr>
+          <tr>
+            <th>12-21-12</th>
+            <th>My Next Birthday</th>
+          </tr>
+          <tr>
+            <th>12-21-12</th>
+            <th>The Day We All Die</th>
+          </tr>
+        </table>
+
+      </p>
+    </div>
+
+    <div id="randinfo">
+      <h3>The Most Powerful Superhumans</h3>
+          <ul id="superhumans">
+            <li class="unknown">Beyonder</li>
+            <li class="villion">Galactus</li>
+            <li class="hero">Franklin Richards</li>
+            <li class="hero">Reed Richards</li>
+          </ul>
+          <p><h4>Who do you think is most powerful?</h4></p>
+          <h6>Very Small</h6>
+    </div>
+
+  </body>
+</html>
